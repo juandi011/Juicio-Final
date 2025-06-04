@@ -4,8 +4,8 @@ from infierno import infierno
 #JUICIO FINAL V0
 #03/06/2025
 
-PECADO = 0 #0 = CIELO, 1 = INFIERNO, entre 0 y 1 = PURGATORIO
-i = 0
+PECADO = 0.5 #0 = CIELO, 1 = INFIERNO, entre 0 y 1 = PURGATORIO
+i = 1
 respuesta = ""
 
 print("Bienvenido a tu Juicio Final")
@@ -22,7 +22,7 @@ if PECADO == 0: #CIELO
 
 if PECADO > 0: #JUICIO
     print("HAS LLEGADO CON MANCHA A TU JUICIO FINAL")
-    input("¿Te arrepientes de tus pecados? (si/no): ")
+    respuesta = input("¿Te arrepientes de tus pecados? (si/no): ")
     if respuesta.lower() == "si":
         print("DIOS ES MISERICORDIOSO")
         print("TUS PECADOS HAN SIDO PERDONADOS")

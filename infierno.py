@@ -2,12 +2,12 @@ import time
 
 def infierno():
     print()
-    print("TUS ACCIONES TE HAN CONDENADO")
+    print("TU DESTINO ES EL INFIERNO")
     print()
     print()
     print("Su nivel de pecado es MÁXIMO")
     print()
-    print("Su destino es el infierno")
+    print("Asuma las consecuencias de sus actos")
     print()
     while True:
         time.sleep(2)
