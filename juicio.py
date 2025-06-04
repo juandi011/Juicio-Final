@@ -1,10 +1,11 @@
 import time
 from cielo import cielo
 from infierno import infierno
-#JUICIO FINAL V0
-#04/06/2025
+from purgatorio import purgatorio
 
-PECADO = 0.5 #0 = CIELO, 1 = INFIERNO, entre 0 y 1 = PURGATORIO
+#JUICIO FINAL pre-Alpha
+
+PECADO = 0.6 #0 = CIELO, 1 = INFIERNO, entre 0 y 1 = PURGATORIO
 i = 1
 respuesta = ""
 
@@ -24,9 +25,13 @@ if PECADO > 0: #JUICIO
     print("HAS LLEGADO CON MANCHA A TU JUICIO FINAL")
     respuesta = input("¿Te arrepientes de tus pecados? (si/no): ")
     if respuesta.lower() == "si":
-        print("DIOS ES MISERICORDIOSO")
-        print("TUS PECADOS HAN SIDO PERDONADOS")
-        cielo()
+        #Aunque uno se arrepienta, puede seguir teniendo pecado
+        if PECADO - 0.5 < 0: #Si el pecado que queda es menor de 0.5, se perdona
+            print("DIOS ES MISERICORDIOSO")
+            print("TUS PECADOS HAN SIDO PERDONADOS")
+            cielo()
+        else: #Aún queda pecado
+            purgatorio()
+
     else:
-        print("No se mostrará el nivel de pecado")
-    infierno()               
+        infierno()               
