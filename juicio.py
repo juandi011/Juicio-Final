@@ -2,7 +2,7 @@ import time
 from cielo import cielo
 from infierno import infierno
 #JUICIO FINAL V0
-#03/06/2025
+#04/06/2025
 
 PECADO = 0.5 #0 = CIELO, 1 = INFIERNO, entre 0 y 1 = PURGATORIO
 i = 1
